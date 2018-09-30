@@ -41,11 +41,11 @@ public class MainActivity extends BaseActivity {
         sideBar = findViewById(R.id.sideBar);
         sideBar.setTextView(dialog);
         //根据活动的位置可以做出响应的监听事件
-//        sideBar.setOnTouchingLetterChangedListener(new SideBar.OnTouchingLetterChangedListener() {
-//            @Override
-//            public void onTouchingLetterChanged(String s) {
-//
-//            }
-//        });
+        sideBar.setOnTouchingLetterChangedListener(new SideBar.OnTouchingLetterChangedListener() {
+            @Override
+            public void onTouchingLetterChanged(String s) {
+
+            }
+        });
     }
 }
