@@ -1,17 +1,20 @@
 package zjl.example.com.temptest.activity;
 
 
+import android.view.View;
 import android.widget.TextView;
 
 import com.jaydenxiao.common.base.BaseActivity;
 
 import util.UpdateAppUtils;
 import zjl.example.com.temptest.R;
+import zjl.example.com.temptest.widget.CircleView;
 import zjl.example.com.temptest.widget.SideBar;
 
 public class MainActivity extends BaseActivity {
     SideBar sideBar;
     TextView dialog;
+    CircleView circleView;
 
     @Override
     public int getLayoutId() {
@@ -47,5 +50,14 @@ public class MainActivity extends BaseActivity {
 
             }
         });
+
+        circleView = findViewById(R.id.circleView);
+        circleView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                circleView.invalidate();
+            }
+        });
+
     }
 }

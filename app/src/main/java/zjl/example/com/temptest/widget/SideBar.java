@@ -55,8 +55,8 @@ public class SideBar extends View {
         int width = getWidth(); // 获取对应宽度
 
 
-        float singleHeight = (height * 1f) / b.length;// 获取每一个字母的高度
-        singleHeight = (height * 1f - singleHeight/2) / b.length;
+        float singleHeight = (height * 1f) / b.length;// 获取每一个字母的高度(一个字母可触摸的位置高度)
+        singleHeight = (height * 1f - singleHeight/2) / b.length;// 字母真正显示再栏里的高度
         for (int i = 0; i < b.length; i++) {
             paint.setColor(Color.rgb(23, 122, 216));
             // paint.setColor(Color.WHITE);
@@ -66,13 +66,13 @@ public class SideBar extends View {
             // 选中的状态
             if (i == choose) {
                 paint.setColor(Color.parseColor("#c60000"));
-                paint.setFakeBoldText(true);
+                paint.setFakeBoldText(true);//模拟实现粗体文字，设置在小字体上效果会非常差
             }
             // x坐标等于中间-字符串宽度的一半.
             float xPos = width / 2 - paint.measureText(b[i]) / 2;
             float yPos = singleHeight * i + singleHeight;
             canvas.drawText(b[i], xPos, yPos, paint);
-            paint.reset();// 重置画笔
+            paint.reset();// 重置画笔（把更改过的参数还原为默认的）
         }
 
     }
