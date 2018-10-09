@@ -2,6 +2,7 @@ package zjl.example.com.temptest.activity;
 
 
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jaydenxiao.common.base.BaseActivity;
@@ -15,6 +16,7 @@ public class MainActivity extends BaseActivity {
     SideBar sideBar;
     TextView dialog;
     CircleView circleView;
+    EditText editText;
 
     @Override
     public int getLayoutId() {
@@ -58,6 +60,10 @@ public class MainActivity extends BaseActivity {
                 circleView.invalidate();
             }
         });
+
+
+        editText = findViewById(R.id.editText);
+        editText.setError("报错了！");
 
     }
 }
