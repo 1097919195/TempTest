@@ -1,6 +1,7 @@
 package zjl.example.com.temptest.activity;
 
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -64,6 +65,13 @@ public class MainActivity extends BaseActivity {
 
         editText = findViewById(R.id.editText);
         editText.setError("报错了！");
+
+
+
+        findViewById(R.id.sensorBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(this, SensorActivity.class);
+            startActivity(intent);
+        });
 
     }
 }
