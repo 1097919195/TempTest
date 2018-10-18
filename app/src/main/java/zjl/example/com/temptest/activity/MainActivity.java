@@ -2,6 +2,7 @@ package zjl.example.com.temptest.activity;
 
 
 import android.content.Intent;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -73,6 +74,11 @@ public class MainActivity extends BaseActivity {
 
         findViewById(R.id.sensorBtn).setOnClickListener(v -> {
             Intent intent = new Intent(this, SensorActivity.class);
+            startActivity(intent);
+        });
+
+        findViewById(R.id.recyclerViewBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(this, RecyclerViewActivity.class);
             startActivity(intent);
         });
 

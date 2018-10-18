@@ -21,6 +21,8 @@
 
         <activity android:name=".activity.SensorActivity"
             android:configChanges="orientation|screenSize"/>
+        <activity android:name=".activity.RecyclerViewActivity"
+            android:screenOrientation="nosensor"/>
     </application>
 
 </manifest>
