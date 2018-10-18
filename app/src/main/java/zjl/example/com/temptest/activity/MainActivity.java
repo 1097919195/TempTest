@@ -66,9 +66,9 @@ public class MainActivity extends BaseActivity {
         editText = findViewById(R.id.editText);
         editText.setError("报错了！");
 
-        //返回的对象不同
-        int s = Integer.parseInt("s");
-        Integer s1 = Integer.valueOf("s");
+//        //返回的对象不同
+//        int s = Integer.parseInt("s");
+//        Integer s1 = Integer.valueOf("s");
 
 
         findViewById(R.id.sensorBtn).setOnClickListener(v -> {

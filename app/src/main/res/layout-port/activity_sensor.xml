@@ -18,4 +18,17 @@
 
     </zjl.example.com.temptest.widget.CustomViewGroup>
 
+    <zjl.example.com.temptest.widget.RoundProgressBar
+        android:id="@+id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:textIsDisplayable="true"
+        app:backColor="@color/colorPrimary"
+        app:roundColor="@color/colorPrimary"
+        app:roundProgressColor="@color/main_color"
+        app:textSize="30sp"
+        app:textColor="@color/white" />
+
 </RelativeLayout>
