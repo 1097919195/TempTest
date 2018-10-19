@@ -12,6 +12,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.widget.LinearLayout;
 
+import com.jaydenxiao.common.commonutils.ToastUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +44,13 @@ public class RecyclerViewActivity extends Activity {
         recyclerView.setAdapter(myAdapter);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));//默认
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        myAdapter.setOnItemClickListener(new MyAdapter.OnItemClickListener() {
+            @Override
+            public void onClick(int position) {
+                ToastUtil.showShort(String.valueOf(position));
+            }
+        });
 
         //先实例化Callback
         ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(myAdapter);

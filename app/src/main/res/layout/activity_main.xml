@@ -36,9 +36,17 @@
     <zjl.example.com.temptest.widget.CustomViewGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/recyclerViewBtn">
+        android:layout_above="@+id/lockBtn">
 
     </zjl.example.com.temptest.widget.CustomViewGroup>
+
+    <Button
+        android:layout_above="@+id/recyclerViewBtn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/lockBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="手势滑动界面"/>
 
     <Button
         android:layout_above="@+id/sensorBtn"

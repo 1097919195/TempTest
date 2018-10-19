@@ -23,6 +23,8 @@
             android:configChanges="orientation|screenSize"/>
         <activity android:name=".activity.RecyclerViewActivity"
             android:screenOrientation="nosensor"/>
+        <activity android:name=".activity.DirectionDragActivity"
+            android:screenOrientation="nosensor"/>
     </application>
 
 </manifest>

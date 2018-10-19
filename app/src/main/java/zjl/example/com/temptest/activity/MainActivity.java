@@ -82,5 +82,11 @@ public class MainActivity extends BaseActivity {
             startActivity(intent);
         });
 
+        findViewById(R.id.lockBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(this, DirectionDragActivity.class);
+            startActivity(intent);
+        });
+
+
     }
 }

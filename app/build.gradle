@@ -33,6 +33,7 @@ android {
     }
 }
 
+//强制版本号统一
 configurations.all {
     resolutionStrategy.eachDependency { DependencyResolveDetails details ->
         def requested = details.requested
@@ -53,4 +54,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation project(':common')
     compile 'com.teprinciple:updateapputils:1.4'
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
 }
