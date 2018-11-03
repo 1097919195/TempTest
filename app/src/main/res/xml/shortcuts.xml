@@ -1,0 +1,14 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android" >
+    <shortcut
+        android:shortcutId="add_website"
+        android:icon="@drawable/ic_image_loading"
+        android:shortcutShortLabel="@string/app_name"
+        android:shortcutLongLabel="@string/app_name"
+        >
+        <intent
+            android:action="com.example.android.appshortcuts.ADD_WEBSITE"
+            android:targetPackage="com.example.android.appshortcuts"
+            android:targetClass="com.example.android.appshortcuts.Main"
+            />
+    </shortcut>
+</shortcuts>

@@ -1,7 +1,12 @@
 package zjl.example.com.temptest.activity;
 
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.pm.ShortcutInfo;
+import android.content.pm.ShortcutManager;
+import android.graphics.drawable.Icon;
+import android.os.Build;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
@@ -9,8 +14,11 @@ import android.widget.TextView;
 
 import com.jaydenxiao.common.base.BaseActivity;
 
+import java.util.Arrays;
+
 import util.UpdateAppUtils;
 import zjl.example.com.temptest.R;
+import zjl.example.com.temptest.app.AppConstant;
 import zjl.example.com.temptest.widget.CircleView;
 import zjl.example.com.temptest.widget.SideBar;
 
@@ -87,6 +95,25 @@ public class MainActivity extends BaseActivity {
             startActivity(intent);
         });
 
+        //7.1才支持添加shortcut
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.N_MR1){
+            //代码中动态添加shortcut
+            dynamicAddShortCut();
+        }
+    }
 
+    @TargetApi(Build.VERSION_CODES.N_MR1)
+    private void dynamicAddShortCut() {
+        Intent intent = new Intent();
+        intent.setAction(AppConstant.ACTION_ADD_SHORTCUT);
+        intent.setClassName("zjl.example.com.temptest",
+                "zjl.example.com.temptest.activity.MainActivity");
+        ShortcutInfo.Builder builder = new ShortcutInfo.Builder(this, "dynamic shortcut")
+                .setIntent(intent)
+                .setShortLabel("This is a dynamic shortcut")
+                .setLongLabel("This is a dynamic shortcut with long label")
+                .setIcon(Icon.createWithResource(this, R.drawable.ic_image_loading));
+        ShortcutManager shortcutManager = getSystemService(ShortcutManager.class);
+        shortcutManager.addDynamicShortcuts(Arrays.asList(builder.build()));
     }
 }

@@ -17,10 +17,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
 
         <activity android:name=".activity.SensorActivity"
-            android:configChanges="orientation|screenSize"/>
+            android:configChanges="orientation|screenSize">
+        </activity>
+
         <activity android:name=".activity.RecyclerViewActivity"
             android:screenOrientation="nosensor"/>
         <activity android:name=".activity.DirectionDragActivity"
