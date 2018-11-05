@@ -56,4 +56,6 @@ dependencies {
     compile 'com.teprinciple:updateapputils:1.4'
 
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
+
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 }

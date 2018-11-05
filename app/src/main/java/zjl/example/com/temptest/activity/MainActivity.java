@@ -80,6 +80,11 @@ public class MainActivity extends BaseActivity {
 //        Integer s1 = Integer.valueOf("s");
 
 
+        findViewById(R.id.three).setOnClickListener(v -> {
+            Intent intent = new Intent(this, ThreeLevelActivity.class);
+            startActivity(intent);
+        });
+
         findViewById(R.id.sensorBtn).setOnClickListener(v -> {
             Intent intent = new Intent(this, SensorActivity.class);
             startActivity(intent);

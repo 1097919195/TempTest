@@ -29,6 +29,8 @@
             android:screenOrientation="nosensor"/>
         <activity android:name=".activity.DirectionDragActivity"
             android:screenOrientation="nosensor"/>
+        <activity android:name=".activity.ThreeLevelActivity"
+            android:screenOrientation="nosensor"/>
     </application>
 
 </manifest>

@@ -36,9 +36,17 @@
     <zjl.example.com.temptest.widget.CustomViewGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/lockBtn">
+        android:layout_above="@+id/three">
 
     </zjl.example.com.temptest.widget.CustomViewGroup>
+
+    <Button
+        android:layout_above="@+id/lockBtn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/three"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="三级Adapter界面"/>
 
     <Button
         android:layout_above="@+id/recyclerViewBtn"
