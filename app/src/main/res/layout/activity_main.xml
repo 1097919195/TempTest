@@ -36,9 +36,17 @@
     <zjl.example.com.temptest.widget.CustomViewGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/three">
+        android:layout_above="@+id/timeBtn">
 
     </zjl.example.com.temptest.widget.CustomViewGroup>
+
+    <Button
+        android:layout_above="@+id/three"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/timeBtn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="时间轴"/>
 
     <Button
         android:layout_above="@+id/lockBtn"

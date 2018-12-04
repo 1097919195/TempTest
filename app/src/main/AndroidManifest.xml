@@ -31,6 +31,8 @@
             android:screenOrientation="nosensor"/>
         <activity android:name=".activity.ThreeLevelActivity"
             android:screenOrientation="nosensor"/>
+        <activity android:name=".activity.TimeAxisActivity"
+            android:screenOrientation="nosensor"/>
     </application>
 
 </manifest>

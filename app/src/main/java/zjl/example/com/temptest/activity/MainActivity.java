@@ -79,6 +79,10 @@ public class MainActivity extends BaseActivity {
 //        int s = Integer.parseInt("s");
 //        Integer s1 = Integer.valueOf("s");
 
+        findViewById(R.id.timeBtn).setOnClickListener(v -> {
+            Intent intent = new Intent(this, TimeAxisActivity.class);
+            startActivity(intent);
+        });
 
         findViewById(R.id.three).setOnClickListener(v -> {
             Intent intent = new Intent(this, ThreeLevelActivity.class);

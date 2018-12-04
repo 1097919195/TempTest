@@ -58,4 +58,6 @@ dependencies {
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
 
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    compile 'com.github.vipulasri:timelineview:1.0.6'
 }
