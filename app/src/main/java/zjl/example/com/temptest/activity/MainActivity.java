@@ -13,7 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jaydenxiao.common.base.BaseActivity;
+import com.jaydenxiao.common.commonutils.LogUtils;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 
 import util.UpdateAppUtils;
@@ -35,7 +37,15 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initPresenter() {
+        SimpleDateFormat aDate=new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss");
+        SimpleDateFormat bDate=new SimpleDateFormat("yyyy-MMMMMM-dddddd");
+        long now=System.currentTimeMillis();
+        System.err.println(aDate.format(now));
+        System.err.println(bDate.format(now));
 
+        String s = "qwer?asdf";
+        String newS = s.substring(s.indexOf("?")+1,s.length()-1);
+        LogUtils.loge("substring=====" + newS);
     }
 
     @Override
